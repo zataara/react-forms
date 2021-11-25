@@ -11,7 +11,7 @@ const BoxList = () => {
     return (
       <div>
         {boxes.map(box => (
-          <Box backgroundColor={box.backgroundColor} width={box.width} height={box.height} />
+          <Box id={box.id} backgroundColor={box.backgroundColor} width={box.width} height={box.height} remove={remove} />
         ))}
       </div>
     );
@@ -22,6 +22,9 @@ const BoxList = () => {
     setBoxes(boxes => [...boxes, newBox])
   }
   
+  const remove = (id) => {
+    setBoxes(boxes => boxes.filter(box => box.id !== id))
+}
   
   return (
     <div>
