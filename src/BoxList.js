@@ -11,7 +11,11 @@ const BoxList = () => {
     return (
       <div>
         {boxes.map(box => (
-          <Box id={box.id} backgroundColor={box.backgroundColor} width={box.width} height={box.height} remove={remove} />
+          <Box 
+            id={box.id} 
+            backgroundColor={box.backgroundColor} 
+            width={box.width} height={box.height} 
+            remove={remove} />
         ))}
       </div>
     );
